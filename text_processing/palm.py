@@ -6,15 +6,15 @@ API_KEY = "AIzaSyBjRfI0lBWU37_4IZ2y1hMqJhYgtAeGQy0"
 palm.configure(api_key = API_KEY)
 
 def summarize(text, model):
-    prompt = ("I have text that is a conversation between a mdedical practitioner and a patient. I want you to summaraize and identify the key points that were discussed. Include details like what the main medicine the convesation was about, and the key point the patient should know for safely using that medicine")
+    prompt = "Summarize this conversation between a practitioner and a patient who is recieving information about a new medication they are being perscribed. Please give key points that the patient must know when taking the medicaion"
 
     completion = palm.generate_text(
         model=model,
         prompt=prompt,
         #higher value -> more variability
-        #temperature=0,
+        temperature=0.1,
         #max character output
-        max_output_tokens=800
+        max_output_tokens=300
     )
 
     return completion.result
@@ -26,7 +26,7 @@ model = models[0].name
 print("using model: ", model)
 
 data = ""
-with open('text_samples/osce2_transcript.txt', 'r') as file:
+with open('text_samples/osce1_transcript.txt', 'r') as file:
     data = file.read().rstrip()
 
 summary_string = summarize(data, model)
