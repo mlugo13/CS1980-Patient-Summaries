@@ -7,6 +7,9 @@ contains mp3/mp4/wav and other audio/video files to use as sample input.
 currently has a palm file with sample summarization code. Not very functional (better computer?)
 requirements.txt has the dependancies to run it
 
+there is a llama2 sample file in google collab, but trying to run in on large inputs needs more ram usage
+https://colab.research.google.com/drive/12WHXcR4LTz27YXd5UQ6_EYSWint7nPfq?usp=sharing
+
 ### Whisper
 currently has a whisperReader.py file that takes in audio/video from the samples folder and writes 
 the transcription in a single line that goes to the text_samples folder
@@ -18,3 +21,4 @@ also have to put sample files into the files section on the left every time
 speaker recognition doesn't seem to be super accurate
 
 Both the whisper and text processing files have (Marlon)'s authentification token, from huggingface
+
