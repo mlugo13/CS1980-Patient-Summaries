@@ -10,6 +10,10 @@ requirements.txt has the dependancies to run it
 there is a llama2 sample file in google collab, but trying to run in on large inputs needs more ram usage
 https://colab.research.google.com/drive/12WHXcR4LTz27YXd5UQ6_EYSWint7nPfq?usp=sharing
 
+Working: Replicate API
+https://colab.research.google.com/drive/1zW8KBMTM-5A8nQtNR56GuEqRiESB_dfN?usp=sharing
+needs toekn from replicate, currently seems to be working without any space constraints, needs testing locally
+
 ### Whisper
 currently has a whisperReader.py file that takes in audio/video from the samples folder and writes 
 the transcription in a single line that goes to the text_samples folder
