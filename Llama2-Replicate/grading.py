@@ -47,7 +47,7 @@ while(cont):
 
     count = 1;
     for prompt in prompts:
-        print("\n"+ str(count))
+        print("\n" + str(count) +") " + prompt)
         for event in replicate.stream(
             "meta/llama-2-70b-chat",
             input={
