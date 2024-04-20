@@ -2,7 +2,7 @@ import google.generativeai as palm
 import asyncio
 from pyppeteer import launch
 
-API_KEY = "AIzaSyBjRfI0lBWU37_4IZ2y1hMqJhYgtAeGQy0"
+API_KEY = "Put real api key here"
 palm.configure(api_key = API_KEY)
 
 def summarize(text, model):
